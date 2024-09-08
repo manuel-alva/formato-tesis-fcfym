@@ -1,0 +1,85 @@
+%%%% PLANTILLA DE TESIS DE LICENCIATURA PARA FCFYM - UNT %%%%%
+%%%% MIT License
+%%%% Copyright (c) 2024 Manuel Alva
+
+\documentclass[a4paper,12pt,oneside]{book}
+\usepackage[left=3cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,activeacute,es-lcroman,es-nodecimaldot]{babel}
+\usepackage{graphicx,subcaption,lipsum}
+\usepackage{color}
+\usepackage{physics}
+\usepackage{xcolor}
+\usepackage[colorlinks=true, allcolors=black]{hyperref}
+\usepackage{cancel}
+\usepackage{marvosym}
+\usepackage{ulem}
+\usepackage{comment}
+\usepackage{float}
+\usepackage[notlot,notlof]{tocbibind}
+\usepackage[no-math]{fontspec}
+\usepackage{relsize}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+
+															
+
+\pagestyle{fancyplain}
+\fancyhf{}
+\fancyfoot[R]{\thepage}
+\renewcommand{\footrulewidth}{0pt}
+
+\hypersetup{citecolor=black,colorlinks=true,linkcolor=black,urlcolor=black}
+
+
+\setmainfont{Arial}
+
+\newfontfamily\ArialNarrow{Arial Narrow}
+\newfontfamily\Edward{Edwardian Script ITC}
+
+\linespread{1.5}    
+
+
+\begin{document}
+
+\renewcommand{\contentsname}{\'Indice}
+\renewcommand{\listfigurename}{\'Indice de Figuras}
+\renewcommand{\listtablename}{\'Indice de Tablas}
+\renewcommand{\tablename}{Tabla}
+\pagestyle{plain} 
+
+\setcounter{page}{1}
+\pagenumbering{roman}
+\include{Caratula}
+\include{Dedicatoria}
+\include{Agradecimientos}
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\include{Resumen}
+\include{Abstract}
+
+\newpage
+\newcounter{romanpages}
+\setcounter{romanpages}{\value{page}}
+\pagenumbering{arabic}
+\setcounter{page}{\numexpr\value{romanpages}\relax}
+
+\include{Introduccion}
+\include{Capitulo2}
+\include{Capitulo3}
+\include{Capitulo4}
+\include{Capitulo5}
+\include{Capitulo6}
+% Puede agregar más capítulos al documento con \include { }
+\include{Conclusiones}
+\def\bibname{Referencias bibliográficas}
+\include{Referencias}
+\appendix
+\include{AnexoA}
+% Puede agregar más secciones al apéndice con \include { }
+
+\end{document}
